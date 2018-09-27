@@ -43,15 +43,18 @@ int bSearch(const int* arr, int arrSize, int target, int * idx)
 int main()
 {
 	int arr[MAX_SIZE];
+	printf("<<<배열에 넣을 숫자 %d개를 입력하세요.>>> \n", MAX_SIZE);
 	for (int i = 0; i < MAX_SIZE; i++)
 	{
 		scanf("%d", &arr[i]);
 	}
-	
-	int target = 2;
+	// target을 수정하여 찾을 값을 정하시오.
+	int target = 4;
 	int index = -1;
 	if (bSearch(arr, MAX_SIZE, target, &index) == 0)
 	{
-		printf("index : %d\n", index);
+		printf("target의 index는 %d입니다.\n", index);
 	}
+	else
+		printf("찾으시는 숫자가 없습니다.\n");
 }
